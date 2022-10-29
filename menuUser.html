@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="utf-8">
+    <title>Меню</title>
+    <link rel="shortcut icon" href="images/loginico.png">
+    <link rel="stylesheet" href="styles/loginStyle.css">
+</head>
+<body onload="getTransfering()"> 
+    <!--onload="getTransfering()"-->    
+    <div class="eventName">
+        <h1 id="greeting"></h1>
+        <h3>
+           <br>Приветствуем Вас </br>
+           <br>на Всероссийской олимпиаде</br>
+           <br>по специальности "Таможенное дело"</br>
+        </h3>
+    </div>
+    <div class="cont">
+    <div class="container">
+        <div class="wrapper">
+            <div class="content">
+                <div class="tabs">
+                    <nav class="tabs__items">
+                        <a href="#tab_01" class="tabs__item"><span>ВСО РЕГ 2023</span></a>
+                        <a href="#tab_02" class="tabs__item"><span>ВСО РЕГ 2022</span></a>
+                        <a href="#tab_03" class="tabs__item"><span>ВСО РЕГ 2021</span></a>
+                    </nav>
+                    <div class="tabs__body">
+                        <div id="tab_01" class="tabs__block">
+                            Пока нет данных.
+                        </div>
+                        <div id="tab_02" class="tabs__block">
+                            Мандарины свежие из Турции, 1 товар, СIF Новороссийск, Море и авто, метод 1 без ДТС. Есть льготы.
+                            <button class="buttonGo" id="buttonGo22" title="РЕГИОНАЛЬНЫЙ ЭТАП ВСО 2022">ЗАПОЛНИТЬ</button>
+                        </div>
+                        <div id="tab_03" class="tabs__block">
+                            Столы письменные из Китая, 1 товар, СFR Новороссийск, Море и авто, метод 1 без ДТС. Без льгот.
+                            <button class="buttonGo" id="buttonGo21" title="РЕГИОНАЛЬНЫЙ ЭТАП ВСО 2021">ЗАПОЛНИТЬ</button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+
+    <div class="container">
+        <form class="form" id="menuContent">
+            <h1 class="form__title">История действий</h1>
+               <table class="output" id="resultsTable">
+                   <thead>
+                        <tr>
+                            <th>ФИО</th>
+                            <th>Дата</th>
+                            <th>Мероприятие</th>
+                            <th>Заполненность</th>
+                            <th>Оценка</th>
+                            <th id="extra">Обзор</th>
+                        </tr>
+                    </thead>
+                    <tbody id="bodyOfTable">
+
+                    </tbody>
+                    
+               </table>
+          
+        </form>
+</div>
+<button class="quit">ВЫХОД<ion-icon name="log-out-outline"></ion-icon></ion-icon></button>
+<label for="" class="copyright">&copy;Разработка: Амандурдыев Х.Д.</label>
+
+<div class="loader"></div>
+<script src='scripts/menuUserScript.js'></script>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+
+</body>

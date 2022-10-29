@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>GTCoding</title>
+    
+    
+  </head>
+  <body>
+    <h1>Declaration</h1>
+    <table class="mainTable" id="mainTable">
+      <tr>
+        <td class="adminTd">CIF Новороссийск</td>
+        <td class="adminTd">71</td>
+        <td class="adminTd">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+        </td>
+      </tr>
+    </table>
+    <div class="raiting">
+      <div class="degree" style="background-color: lightcoral;">x0.00</div>
+      <div class="degree" style="background-color: gold">x0.50</div>
+      <div class="degree" style="background-color: lightgreen;">x1.00</div>
+      <div class="degree" style="background-color: violet;">x2.00</div>
+    </div>
+<button id="btn1">Set attribute</button>
+
+<style>
+  table td {
+    position: relative;
+    border: 1px solid #521241;
+    width: fit-content;
+    height: 10px;
+    text-align: center;
+    background-color: white;
+    cursor: pointer;
+    color: #0f7a65;
+  }
+  .raiting {
+    width: fit-content;
+    display: block;
+  }
+  .degree {
+    width: fit-content;
+    font-size: 1vw;
+    border-bottom: 1px solid white;
+    padding: 5% 10%;
+    margin-bottom: 5%;
+    border-radius: 4px;
+    color: #0f7a65;
+  }
+  .tdgradeshow::before {
+  
+  position: absolute;
+  left: 0;
+  top: 0;
+  content: var(--showupcontent, '50');
+  color: #0f7a65;
+  width: fit-content;
+  visibility: hidden;
+  opacity: 0;
+  animation: upward 0.3s ease;
+}
+
+@keyframes upward {
+  
+  100% {
+  top: -10px;
+  visibility: visible;
+  opacity: 1;  
+  }
+}
+
+
+
+</style>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script>
+  var adminTd = document.querySelectorAll('.adminTd');
+
+  document.getElementById('btn1').addEventListener ('click', ()=> {
+
+  });
+  
+  [].forEach.call(adminTd,function(el){
+  el.addEventListener('click', function (e) {
+    
+    this.classList.add('tdgradeshow');
+    setTimeout(function(){
+      el.classList.remove('tdgradeshow');
+   },500);}
+  //   this.classList.add('tdgradeshow');
+  //   this.style.setProperty ('--showupcontent', '12x');
+  //   console.log(this);
+  //   setTimeout(function(){
+  //     el.classList.remove('tdgradeshow');
+  //  },500);
+  )});
+
+</script>
+</body>
+</html>
